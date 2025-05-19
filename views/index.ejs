@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Joker</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Indie+Flower&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<section>
+
+	<body>
+		<h1> JOKES </h1>
+		<h3>
+			<%= setup %>
+		</h3>
+		<h3>
+			<%= delivery %>
+		</h3>
+		<h3>
+			<%= joke %>
+		</h3>
+
+		<h2> CUSTOMISE </h2>
+		<form action="/get-joke" method="POST">
+			<ul>
+				<label for="category">joke category:</label>
+				<select name="category" id="category" class="">
+					<option value="Any">Any</option>
+					<option value="Programming">Programming</option>
+					<option value="Misc">Misc</option>
+					<option value="Dark">Dark</option>
+					<option value="Pun">Pun</option>
+					<option value="Spooky">Spooky</option>
+					<option value="Christmas">Christmas</option>
+				</select>
+			</ul>
+			<ul>
+				<label for="type">joke type:</label>
+				<select name="type" id="type" class="">
+					<option value="">any</option>
+					<option value="single">single</option>
+					<option value="twopart">twopart</option>
+				</select>
+			</ul>
+			<ul>
+				<label for="flags">blacklist flags:</label>
+				<select name="flags" id="flags" class="">
+					<option value="">any</option>
+					<option value="nsfw">nsfw</option>
+					<option value="religious">religious</option>
+					<option value="political">political</option>
+					<option value="racist">racist</option>
+					<option value="sexist">sexist</option>
+					<option value="explicit">explicit</option>
+				</select>
+			</ul>
+
+			<ul>
+				<button type="submit">GET JOKE</button>
+			</ul>
+
+		</form>
+
+</section>
+</body>
+
+</html>
